@@ -6,8 +6,8 @@ class Student
   @@all = []
 
   def initialize
-    @name = name
-    @grade = grade
+    # @name = name
+    # @grade = grade
 
     @@all << self
   end
