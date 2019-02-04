@@ -26,6 +26,11 @@ class Student
   def self.drop_table
     DB[:conn].execute("DROP TABLE IF EXISTS students;")
   end
+
+  def self.save(name, grade)
+    DB[:conn].execute("INSERT INTO pokemon (name, type) VALUES (?, ?)",name, type)
+
+  end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 
