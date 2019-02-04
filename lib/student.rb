@@ -28,7 +28,14 @@ class Student
   end
 
   def self.save(name, grade)
-    DB[:conn].execute("INSERT INTO pokemon (name, type) VALUES (?, ?)",name, type)
+
+    sql = <<-SQL
+     INSERT INTO students (name, grade) 
+     VALUES (?, ?)
+   SQL
+
+    DB[:conn].execute(sql, self.name, self.grade)
+
 
   end
   # Remember, you can access your database connection anywhere in this class
